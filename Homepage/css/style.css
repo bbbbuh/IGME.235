@@ -1,0 +1,50 @@
+body {
+    background-color: #629677;
+}
+main, header, footer {
+    background-color: #F6E8EA;
+    border: 3px solid #223127;
+    margin: 10px auto;
+    width: 70vw;
+    padding: 3rem;
+}
+h1, h2 {
+    color: #5C164E;
+    border-bottom: 1px solid ;
+}
+img {
+    border: 3px solid #4ECDC4;
+}
+#title {
+    text-align: center;
+}
+#blocktext {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: #223127;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #223127;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.side {
+    display: block;
+    float: right;
+}
+a:link {
+    color: #629677;
+}
+a:visited, a:focus {
+    color: #223127;
+}
+a:hover {
+    color: #5C164E;
+}
+a:active {
+    color: #4ECDC4;
+}
