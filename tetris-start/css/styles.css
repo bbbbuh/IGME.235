@@ -1,28 +1,72 @@
 h2, h3 {
     border-bottom: 1px solid red;
 }
-figure img {
-    float: right;
-    max-width: 650px;
-    width: 40%;
-    margin: 5px auto;
-    display: block;
-}
-
 h2 {
     clear: both;
 }
 
-.tet {
-    float: left;
-    width: 49%;
-    border: 1px solid gray;
+figure {
+    margin-bottom: 10px;
+    max-width: 650px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
+figure img{
+    width: 100%;
+}
+
+
+header, main, footer {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tet {
+    float: left;
+    flex: 1 1 350px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.long img{
+    width: 80%;
+}
+
+.square img {
+    width: 40%;
+}
+
+div img {
+    width: 60%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+span {
+    display: block;
+    margin-top: 10px;
+    font-size: larger;
+    font-weight: bolder;
+}
+/*
 footer {
     clear: both;
     position: absolute;
     top: 0px;
     right: 0px;
     z-index: -1;
+}
+*/
+#tetlist {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.aliases {
+    text-align: left;
+    margin: 1em;
 }
