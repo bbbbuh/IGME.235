@@ -15,6 +15,7 @@ html {
 html,
 body {
     margin: 0;
+    background-color: blanchedalmond;
 }
 
 header,
@@ -30,6 +31,7 @@ nav,
 aside,
 article {
     padding: .5rem;
+    background-color: white;
 }
 
 nav,
@@ -66,6 +68,21 @@ Grid Formatting
         height: 100vh;
         max-width: 1200px;
         margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #wrapper {
+        display: grid;
+        grid-template-rows: 1fr 10fr 1fr;
+        grid-template-columns: 20% auto 20%;
+        grid-template-areas: "header  header  header"
+            "nav  content  sidebar"
+            "footer  footer  footer";
+
+        height: 96vh;
+        max-width: 1200px;
+        margin: 2vh auto;
     }
 }
 
