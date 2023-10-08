@@ -2,6 +2,11 @@ body {
     margin: 1rem;
 }
 
+#introduction { 
+    grid-area: intro; 
+    margin: 2rem;
+
+}
 
 /* Grid Layout */
 #wrapper {
@@ -33,11 +38,6 @@ body {
 
 h1.game { grid-area: logo; }
 
-#introduction { 
-    grid-area: intro; 
-    margin: 2rem;
-
-}
 
 footer { grid-area: footer; }
 
