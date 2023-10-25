@@ -1,5 +1,5 @@
 
-@media screen and (min-width: 850px)
+@media screen and (min-width: 1000px)
 {
     #portfoliogrid {
         display: grid;
@@ -15,11 +15,14 @@
     }
 
     #topleft {
-        /* text-align: left;
-        float: left; */
-        position: absolute;
+        position: fixed;
         text-wrap: wrap;
         max-width: 250px;
+        background-color: #f06449;
+    }
+
+    nav {
+        max-width: 150px;
     }
 
     .gridbox img {
@@ -39,13 +42,22 @@
     object {
         transform: skew(12deg);
         display: block;
-        margin: 10px auto;
-        width: 90%;
-        height: 100%;
+        margin: auto;
+        width: 80%;
+        height: 80%;
+    }
+
+    #contact {
+        text-align: right;
+        position: absolute;
+        bottom: -800px;
+        right: 3vw;
+        background-color: #5bc3eb;
     }
 }
 
-@media screen and (max-width: 850px) {
+
+@media screen and (max-width: 1000px) {
     #portfoliogrid {
         margin: 0 auto;
     }
@@ -53,7 +65,7 @@
     #about img {
         margin: auto;
         display: block;
-        height: 50%;
+        height: 100%;
         width: 50%;
         object-fit: cover;
     }
@@ -68,19 +80,28 @@
     #resume {
         height: 800px
     }
+
+    .gridbox img {
+        width: 100%;
+        object-fit: cover;
+        float: left;
+    }
 }
 
 body {
-    background-color: lavender;
+    background-color: #00bd9d;
 }
 
 p, a, li {
     font-family: 'League Spartan', sans-serif;
+    font-size: 1.2em;
+    color: #36382e;
 }
 
 h1, h2, h3, h4 {
     font-family: 'Playfair Display', 'League Spartan', sans-serif;
-    margin: 1em;
+    margin: 1rem;
+    color: #36382e;
 }
 
 .gridboxleft p, .gridboxright p {
@@ -89,8 +110,8 @@ h1, h2, h3, h4 {
 
 .gridbox {
     margin: 10px;
-    background-color: beige;
-    border: 8px solid black;
+    background-color: #ede6e3;
+    border: 8px solid #36382e;
     overflow: hidden;
 }
 
@@ -103,7 +124,7 @@ h1, h2, h3, h4 {
 }
 
 #topleft a{
-    margin: 2em;
+    margin: 1rem;
 }
 
 #about {
@@ -116,8 +137,8 @@ h1, h2, h3, h4 {
     transform: translateX(20px)
 }
 
-#contact {
-    float: right;
-    display: block;
+#contact p {
+    margin-right: 1em;
+    margin-left: 2em;
 }
 

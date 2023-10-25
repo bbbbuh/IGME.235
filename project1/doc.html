@@ -18,7 +18,31 @@
     <a href="https://derekknox.com/articles/diagonal-and-slanted-image-grid-web-design-ui/">Slanted image tutorial</a> <br>
     <a href="https://www.w3docs.com/snippets/html/how-to-embed-pdf-in-html.html">Embedded PDF tutorial</a>
     <a href="https://fonts.google.com/">Font source</a>
+
+    <h1>General Notes</h1>
+    <pre>
+        -diagonal gridboxes image formatting is hard
+            -unskew the image first
+            -size the image larger than the container
+            -layer the images behind the gridbox with overflow:hidden
+            -I wanted to make the image in the about me section slanted on both sides, but I was unable to find a method to be able to do that within css
+        -embedding the pdf is very janky, this is the best I can make it look
+            -i cant keep it skewed because the formatting would be off
+            -the best I can do while the grid is skewed is just make it small
+    </pre>
     
+    <h1>Feedback Notes</h1>
+    <pre>
+        -made nav bar scrollable
+            -caused nav bar to go behind grid at certain screen widths and heights
+            -fixed by changing layer of link when hovered over
+        -moved contact info to absolute position when in desktop size
+        -adjusted pdf element size to be more readable
+        -fixed gridbox images getting cut off when in mobile size
+        -images scale after breakpoint
+        -larger text
+
+    </pre>
     
 </body>
 </html>
