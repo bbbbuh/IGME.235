@@ -1,69 +1,123 @@
-#portfoliogrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 0.5fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr auto;
-    grid-template-areas: "left boxes   boxes right"
-                         "left boxes   boxes right"
-                         "left boxes   boxes sidebar"
-                         "left boxes   boxes sidebar"
-                         "left content   content about";
 
-    max-width: 1200px;
-    margin: 0 auto;
-    transform: skew(-15deg)
+@media screen and (min-width: 850px)
+{
+    #portfoliogrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "about   about"
+                             "boxes   boxes"
+                             "boxes   boxes";
+    
+        max-width: 70vw;
+        margin: 0 auto;
+        transform: skew(-12deg)
+    }
+
+    #topleft {
+        /* text-align: left;
+        float: left; */
+        position: absolute;
+        text-wrap: wrap;
+        max-width: 250px;
+    }
+
+    .gridbox img {
+        width: 120%;
+        transform: skew(12deg) translateX(-10%);
+        object-fit: cover;
+        float: left;
+    }
+
+    #about img {
+        transform: skew(12deg) translateX(-20px);
+        height: 100%;
+        width: 200px;
+        object-fit: cover;
+    }
+
+    object {
+        transform: skew(12deg);
+        display: block;
+        margin: 10px auto;
+        width: 90%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #portfoliogrid {
+        margin: 0 auto;
+    }
+
+    #about img {
+        margin: auto;
+        display: block;
+        height: 50%;
+        width: 50%;
+        object-fit: cover;
+    }
+
+    object {
+        display: block;
+        margin: 10px auto;
+        height: 100%;
+        width: 100%;
+    }
+
+    #resume {
+        height: 800px
+    }
+}
+
+body {
+    background-color: lavender;
+}
+
+p, a, li {
+    font-family: 'League Spartan', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', 'League Spartan', sans-serif;
+    margin: 1em;
+}
+
+.gridboxleft p, .gridboxright p {
+    margin: 2em;
 }
 
 .gridbox {
-    margin: 10px 10px 0px;
-    background-color: white;
-}
-
-.gridbox img {
-    width: 300px;
-    height: 200px;
+    margin: 10px;
+    background-color: beige;
+    border: 8px solid black;
+    overflow: hidden;
 }
 
 .gridboxleft {
-    grid-column: 2;
+    grid-column: 1;
 }
 
 .gridboxright {
-    grid-column: 3;
+    grid-column: 2;
 }
 
-#textcontent {
-    grid-area: content;
-    background-color: white;
-}
-
-.bigger {
-    font-size: 2em;
-}
-
-#topleft {
-    grid-area: left;
-    text-align: left;
-}
-
-#sidebar {
-    grid-row: 3/span 2;
-    grid-column: 4;
-}
-
-h3 {
-    background-color: aqua;
+#topleft a{
+    margin: 2em;
 }
 
 #about {
     grid-area: about;
-    border: 8px solid white;
     overflow: hidden;
 }
 
-#about img{
-    transform: skew(15deg) scale(1.5);
-    object-fit: cover;
-    width: 150px;
-    height: 180px;
-
+.abouttext {
+    margin: 2em;
+    transform: translateX(20px)
 }
+
+#contact {
+    float: right;
+    display: block;
+}
+
