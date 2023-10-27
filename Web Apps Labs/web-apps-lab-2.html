@@ -31,8 +31,15 @@
     body.style.fontFamily = "sans-serif";
     document.body.style.color = "#c71a3c";
     let p = document.querySelector("p");
-    p.innerHTML = "Report your UFO sightings here: <a href='https://nuforc.org/'>https://nuforc.org/</a>"
-
+    p.innerHTML = "Report your UFO sightings here: <a href='https://nuforc.org/'>https://nuforc.org/</a>";
+    p.style.color = "green";
+    p.style.fontWeight = "bold";
+    p.style.fontSize = "2em";
+    p.style.textTransform = "uppercase";
+    p.style.textShadow = "3px 2px #A44";
+    document.querySelector("p:nth-of-type(2)").innerHTML = "";
+    document.querySelector("p:nth-of-type(3)").innerHTML = "<img src='https://media.newyorker.com/photos/64ca89f569af7f8649142d29/1:1/w_1010,h_1010,c_limit/Wiley-UFO-03.jpg' alt='black and white photo of a ufo'>";
+    document.querySelector("footer").innerHTML = "&copy; 2023 Joshua Leong";
 	
 </script>
 </body>
