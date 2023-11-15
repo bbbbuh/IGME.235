@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Redline Quotes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&family=Russo+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat Subrayada', sans-serif;
+            background-color: rgb(255, 255, 100);
+        }
+        header, main, footer {
+            margin: 10px auto;
+            max-width: 900px;
+        }
+        header {
+            background-image: url("redline.webp");
+            background-position: center center;
+            background-size: 900px auto;
+            padding: 75px 0px;
+            font-size: xx-large;
+            border: 5px solid red;
+        }
+        main {
+            border: 5px solid red;
+        }
+        h1 {
+            color: red;
+            text-shadow: 2px 2px white;
+            text-align: center;
+        }
+        footer p{
+            font-size: 15px;
+            color: gray;
+            text-align: center;
+        }
+        blockquote {
+            font-family: 'Russo One', sans-serif;
+            font-size: xx-large;
+            text-align: center;
+        }
+        button {
+            width: 100%;
+            display: block;
+            margin: 15px auto;
+            text-align: center;
+            color: white;
+            background-color: red;
+            border-color: red;
+            font-size: x-large;
+            font-family: 'Montserrat Subrayada', sans-serif;
+        }
+
+        button:hover {
+            background-image: url("button.gif");
+            background-position: center center;
+        }
+
+        button:active {
+            color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Redline Quotes</h1>
+    </header>
+    <main>
+        <blockquote>
+
+        </blockquote>
+        <button>
+            <p>New Quote</p>
+        </button>
+    </main>
+    <footer>
+        <p>Made by Joshua Leong 2023</p>
+    </footer>
+    <script>
+        let quotes = ["Mr President, we can't let Funky Boy run loose like that, he's going to destroy Roboworld!", 
+            "Do they intend to violate our airspace using technology that only exists in theory?",
+            "I want to see him do it, just this once! He's so close, I want to see win for once in his life!",
+            "I don’t have the health plan or the balls to do anything that stupid.",
+            "I'm tweaking so hard my teeth itch!"]
+        function displayQuote() 
+        {
+            document.querySelector("blockquote").innerHTML = quotes[Math.floor(Math.random() * quotes.length)];
+        }
+        onload = displayQuote;
+        document.querySelector("button").onclick = displayQuote;
+
+    </script>
+</body>
+</html>

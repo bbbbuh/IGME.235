@@ -39,7 +39,19 @@
 
 <script>
 /* Write your code here! */
-
+let currentColor = "";
+document.querySelectorAll("input").forEach((element) => element.onchange = radioButton);
+function radioButton() 
+{
+	document.querySelector("#info").innerHTML = 'You have selected "' + this.value + '"!';
+	currentColor = this.value;
+}
+document.querySelector("#colorButton").onclick = colorButton;
+function colorButton() 
+{
+	document.querySelector("#info").innerHTML = 'Your FINAL CHOICE is "' + currentColor + '"!';
+	document.querySelector("legend").style.color = currentColor;
+}
 
 </script>
 </body>
