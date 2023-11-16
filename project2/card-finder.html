@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+ 	<title>Giphy Finder</title>
+ 	<link rel="stylesheet" href="css/style.css">
+	<script src="js/script.js"></script>
+  
+</head>
+<body>
+<header>
+	<h1>Magic Card Finder</h1>
+</header>
+
+<div id="options">
+
+
+	<div class="widgets">
+		<button type="button" id="search" class="green">Search</button>
+		<input id="searchterm" type="text" size="20" maxlength="20" autofocus value="tutor" />
+	</div>
+	
+	<div class="widgets">
+		Color: 
+		<select id="color">
+			<option value="Any" selected>Any</option>
+			<option value="W">White</option>
+			<option value="U">Blue</option>
+			<option value="B">Black</option>
+			<option value="R">Red</option>
+			<option value="G">Green</option>
+		</select>
+	</div>
+
+	<div class="widgets">
+		Min CMC:
+		<input id="mincmc" type="text" size="2" maxlength="2" autofocus value="0" />
+		Max CMC:
+		<input id="maxcmc" type="text" size="2" maxlength="2" autofocus value="20" />
+	</div>
+</div>
+
+<div id="status">Ready to Search!</div>
+<hr>
+
+<h2>Results</h2>
+<div id="content">
+	<p>No data yet!</p>
+</div>
+ 
+
+</body>
+</html>
