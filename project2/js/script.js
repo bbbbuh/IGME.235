@@ -102,3 +102,17 @@ function dataLoaded(e) {
 function dataError(e) {
 	console.log("An error occurred");
 }
+
+
+let expanded = false;
+
+function showCheckboxes() {
+  let checkboxes = document.querySelector("#checkboxes");
+  if (!expanded) {
+    checkboxes.style.display = "block";
+    expanded = true;
+  } else {
+    checkboxes.style.display = "none";
+    expanded = false;
+  }
+}
