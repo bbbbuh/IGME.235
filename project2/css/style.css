@@ -1,5 +1,8 @@
+/* General Styling */
 *{
-	font-family:verdana,tahoma,sans-serif;
+	font-family:'Dosis',sans-serif;
+  color:rgb(218, 29, 70);
+  font-size: 1.1rem;
 }
  		
 header h1{
@@ -7,6 +10,21 @@ header h1{
 	text-align:center;
 	font-size:50px;
 	padding-top: 35px;
+  color:rgb(218, 29, 70);
+  border-bottom: 1px solid rgb(218, 29, 70);
+}
+
+hr {
+  border: 1px solid aqua;
+
+}
+
+a {
+  color: aqua;
+}
+
+body { 
+  background-color: rgb(0, 0, 36);
 }
  		
 #status{
@@ -24,58 +42,74 @@ header h1{
 .result {
     display: flex;
     flex-direction: column;
+    max-width: 50vw;
 }
 
 .result img {
     width: 100%;
-    box-shadow: 0px 10px 20px 0px rgba(0,0,0,.4);
+    box-shadow: 0px 0px 5px 5px #5c164e;
 }
 
-		
+.result img:active {
+  width: 150%;
+  z-index: 99999;
+}
+
+	
+/* button styling */
 button{
   display : inline-block;
   cursor : pointer;
-  border-style : solid;
-  border-width : 1px;
-  border-radius : 50px;
   padding : 10px 18px;
-  box-shadow : 0 1px 4px rgba(0,0,0,.6);
-  font-size : 9.5pt;
+  box-shadow : 0px 0px 20px 5px aqua;
   font-weight : bold;
-  color : #fff;
-  text-shadow : 0 1px 3px rgba(0,0,0,.4);
-  font-family : sans-serif;
-  text-decoration : none;
-}
-		
-button.green{
-	border-color: #8fc800;
-	background: #8fc800;
-	background: linear-gradient(top, #8fc800 0%,#438c00 100%);
+  text-shadow : 0 1px 3px rgb(0, 0, 36);
 }
 		
 button:hover{
-	background: #8fDD00;
+	background: aqua;
 }
 		
 button:active{
-	background: #8fFF00;
-	box-shadow : 0 0 6px rgba(0,0,0,.6);
+	background: #5c164e;
+	box-shadow : 0 0 6px rgb(0, 0, 36);
 }
 		
 button:focus {outline:0;}
-		
+
+/* General controls styling */
 .widgets{
-	margin-top: 1em;
-	margin-bottom:1em;
+	margin: auto;
 }
 
-#options {
+
+nav {
 	display: flex;
 	flex-direction: row;
-	width: 70%;
-	margin: auto;
+	width: 90%;
+	margin: 1rem auto;
 	justify-content: space-between;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 3px solid #5c164e;
+}
+
+
+
+@media screen and (max-width: 1100px) {
+  .widgets{
+    margin: 10px auto;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 1em 0;
+    justify-content: space-between;
+    border: 0px;
+  }
 }
 
 /* Checkbox dropdown */
@@ -100,15 +134,28 @@ button:focus {outline:0;}
   bottom: 0;
 }
 
-#checkboxes {
+#colorcheckboxes {
   display: none;
-  border: 1px #dadada solid;
+  border: 1px aqua solid;
 }
 
-#checkboxes label {
+#colorcheckboxes label {
   display: block;
 }
 
-#checkboxes label:hover {
-  background-color: #1e90ff;
+#colorcheckboxes label:hover {
+  background-color: aqua;
+}
+
+#typecheckboxes {
+  display: none;
+  border: 1px aqua solid;
+}
+
+#typecheckboxes label {
+  display: block;
+}
+
+#typecheckboxes label:hover {
+  background-color: aqua;
 }

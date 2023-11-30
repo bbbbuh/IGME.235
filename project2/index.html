@@ -5,70 +5,110 @@
  	<title>Magic Card Finder</title>
  	<link rel="stylesheet" href="css/style.css">
 	<script src="js/script.js"></script>
-  
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
 	<h1>Magic Card Finder</h1>
+	<a href="doc.html">Documentation</a>
 </header>
 
-<div id="options">
+<nav>
 
 
 	<div class="widgets">
-		<button type="button" id="search" class="green">Search</button>
-		<input id="searchterm" type="text" size="20" maxlength="20" autofocus value="tutor" />
-	</div>
-	
-	<div class="widgets">
-		Color: 
-		<select id="color">
-			<option value="Any" selected>Any</option>
-			<option value="W">White</option>
-			<option value="U">Blue</option>
-			<option value="B">Black</option>
-			<option value="R">Red</option>
-			<option value="G">Green</option>
-		</select>
+		<button type="button" id="search">Search</button>
 	</div>
 
 	<div class="widgets">
-		Min CMC:
-		<input id="mincmc" type="text" size="2" maxlength="2" autofocus value="0" />
-		Max CMC:
-		<input id="maxcmc" type="text" size="2" maxlength="2" autofocus value="20" />
+		<p>Name:</p>
+		<input id="searchterm" type="text" size="20" maxlength="20"/>
+	</div>
+
+	<div class="widgets">
+		<p>Card Text:</p>
+		<input id="textterm" type="text" size="20" maxlength="20"/>
+	</div>
+
+	<div class="widgets">
+Min CMC:
+<input id="mincmc" type="text" size="2" maxlength="2" value="0"/>
+	</div>
+	<div class="widgets">
+Max CMC:
+<input id="maxcmc" type="text" size="2" maxlength="2" value="20"/>
 	</div>
 
 	<div class="widgets">
 		<form>
 			<div class="multiselect">
-			  <div class="selectBox" onclick="showCheckboxes()">
+			  <div class="selectBox" onclick="showColorCheckboxes()">
 				<select>
-				  <option>Select an option</option>
+				  <option>Color</option>
 				</select>
 				<div class="overSelect"></div>
 			  </div>
-			  <div id="checkboxes">
-				<label for="one">
-				  <input type="checkbox" id="one" />First checkbox</label>
-				<label for="two">
-				  <input type="checkbox" id="two" />Second checkbox</label>
-				<label for="three">
-				  <input type="checkbox" id="three" />Third checkbox</label>
+			  <div id="colorcheckboxes">
+				<label for="color0">
+				  	<input type="checkbox" id="color0" checked>White</label>
+				<label for="color1">
+				  	<input type="checkbox" id="color1" checked>Blue</label>
+				<label for="color2">
+					<input type="checkbox" id="color2" checked>Black</label>
+				<label for="color3">
+					<input type="checkbox" id="color3" checked>Red</label>
+				<label for="color4">
+				  <input type="checkbox" id="color4" checked>Green</label>
 			  </div>
 			</div>
 		  </form>
 	</div>
-</div>
 
-<div id="status">Ready to Search!</div>
-<hr>
+	<div class="widgets">
+		<form>
+			<div class="multiselect">
+			  <div class="selectBox" onclick="showTypeCheckboxes()">
+				<select>
+				  <option>Card Type</option>
+				</select>
+				<div class="overSelect"></div>
+			  </div>
+			  <div id="typecheckboxes">
+				<label for="type0">
+				  	<input type="checkbox" id="type0" checked>Artifact</label>
+				<label for="type1">
+				  	<input type="checkbox" id="type1" checked>Battle</label>
+				<label for="type2">
+				  	<input type="checkbox" id="type2" checked>Creature</label>
+				<label for="type3">
+					<input type="checkbox" id="type3" checked>Enchantment</label>
+				<label for="type4">
+					<input type="checkbox" id="type4" checked>Instant</label>
+				<label for="type5">
+				  	<input type="checkbox" id="type5" checked>Land</label>
+				<label for="type6">
+				  	<input type="checkbox" id="type6" checked>Legendary</label>
+				<label for="type7">
+					<input type="checkbox" id="type7" checked>Planeswalker</label>
+				<label for="type8">
+				  	<input type="checkbox" id="type8" checked>Sorcery</label>
+			  </div>
+			</div>
+		  </form>
+	</div>
+</nav>
 
-<h2>Results</h2>
-<div id="content">
-	<p>No data yet!</p>
-</div>
- 
-
+<main>
+	<div id="status">Ready to Search!</div>
+	<hr>
+	
+	<h2>Results (Hold left click on card to zoom)</h2>
+	<div id="content">
+		<p>No data yet!</p>
+	</div>
+</main>
 </body>
 </html>
