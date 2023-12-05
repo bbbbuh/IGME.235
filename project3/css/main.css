@@ -1,0 +1,15 @@
+#grid {
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+    width: 45vw;
+    
+}
+
+.gridbox {
+    border: 3px solid black;
+}
+
+.gridbox img{
+    margin: auto;
+}
